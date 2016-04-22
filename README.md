@@ -4,6 +4,8 @@ That project is a work of college (programming Algorithms 3)
 
 Description
 
+****---------------------****
+
 Objetivos
 O objetivo deste trabalho é estudar a leitura de arquivos texto com
 formatação (arquivos CSV - Comma Separated Values) e criar uma estrutura
@@ -48,18 +50,10 @@ Vetores, por exemplo, com o nome. Nesse caso, crie métodos
 alternativos nos DAO, para retornar a nova lista ordenada.
 2. Utilize apenas “Iteradores” para realizar a ordenação.
 3. 
-
+ 
+****---------------------****
 
 What was not done
-
-Tarefas Opcionais
-1. Você pode permitir a criação de outros índices para as Listas e
-Vetores, por exemplo, com o nome. Nesse caso, crie métodos
-alternativos nos DAO, para retornar a nova lista ordenada.
-2. Utilize apenas “Iteradores” para realizar a ordenação.
-
-//
-
 chore optinal
 
 1 You can allow  the create of other index for the lists and vectores, for example, whit the name. In that case, create method alternative at DAO, for return the new list ordination.
