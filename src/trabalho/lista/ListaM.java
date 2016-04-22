@@ -48,7 +48,7 @@ public class ListaM implements CSVParser {
 
     @Override
     public Medicamento readObjectMedicamento() {
-       return p.readObjectMedicamento();
+        return p.readObjectMedicamento();
     }
 
     @Override
@@ -57,58 +57,55 @@ public class ListaM implements CSVParser {
     }
 
     @Override
-    public void arquivoNaListaM(Medicamento novop) {
+    public void enserirArquivoM(Medicamento novo) {
 
-      
-        if (novop != null) {
+        if (novo != null) {
 
             // verifica se a lista está vazia
             if (primeiro == null) {
-                
 
                 // setando null para o proximo do novo nodo
-                novop.setProximo(null);
+                novo.setProximo(null);
                 // setando null para o anterior do novo nodo 
-                novop.setAnterior(null);
+                novo.setAnterior(null);
                 // os ponteiros "primeiro e ultimo" irão receber o nodo criado
-                primeiro = novop;
-                ultimo = novop;
+                primeiro = novo;
+                ultimo = novo;
                 // adicionando 1 para tamanho
                 cont++;
             } else {
 
-             
                 // proximo do Ultimo aponta para o nodo criado
-                ultimo.setProximo(novop);
+                ultimo.setProximo(novo);
                 // setando o nome para o novo nodo2
 
                 // apontando o proximo do nodo criado para null
-                novop.setProximo(null);
+                novo.setProximo(null);
                 // apontando o anterior do nodo criado para o ultimo
-                novop.setAnterior(ultimo);
+                novo.setAnterior(ultimo);
                 // o ultimo vai receber o novo
-                ultimo = novop;
+                ultimo = novo;
                 // adicionando 1 para tamanho
                 cont++;
 
-                while (novop.getAnterior() != null) {
+                while (novo.getAnterior() != null) {
 
-                    if (novop.getCodigo().compareTo(novop.getAnterior().getCodigo()) <= -1) {
+                    if (novo.getCodigo().compareTo(novo.getAnterior().getCodigo()) <= -1) {
                         //vetor.get(j).getCodigo().compareTo(menor.getCodigo()) == -1
                         Medicamento aux = new Medicamento();
-                        Medicamento anterior = novop.getAnterior();
+                        Medicamento anterior = novo.getAnterior();
 
-                        aux.setNome(novop.getNome());
-                        aux.setCodigo(novop.getCodigo());
+                        aux.setNome(novo.getNome());
+                        aux.setCodigo(novo.getCodigo());
 
-                        novop.setNome(anterior.getNome());
-                        novop.setCodigo(anterior.getCodigo());
+                        novo.setNome(anterior.getNome());
+                        novo.setCodigo(anterior.getCodigo());
 
                         anterior.setNome(aux.getNome());
                         anterior.setCodigo(aux.getCodigo());
 
                     }
-                    novop = novop.getAnterior();
+                    novo = novo.getAnterior();
                 }
             }
 
@@ -118,7 +115,7 @@ public class ListaM implements CSVParser {
 
     // pesquisa na lista 
     @Override
-    public void pesquisaNome(String nome) {
+    public void pesquisarNomeM(String nome) {
         // criando duas variaves onde sentinela sempre ira ficar um elemento a traz do remove
         Medicamento pesquisa = primeiro.getProximo();
         // percorrendo a lista até o final onde a mesma recebe null
@@ -140,15 +137,15 @@ public class ListaM implements CSVParser {
 
     // pesquisa na lista 
     @Override
-    public void pesquisaCodigo(String Codigo) {
+    public void pesquisarCodigoM(String codigo) {
         // criando duas variaves onde sentinela sempre ira ficar um elemento a traz do remove
         Medicamento pesquisa = primeiro.getProximo();
         boolean condicao = false;
         // percorrendo a lista até o final onde a mesma recebe null
         while (pesquisa != null) {
             // compara o nome do nodo com o nome que está sendo comparado
-            if (pesquisa.getCodigo().equals(Codigo)) {
-                System.out.println("\n---Codigo encontrado!---\nNome:" + pesquisa.getCodigo() + "Codigo:" + pesquisa.getCodigo() + "/n");
+            if (pesquisa.getCodigo().equals(codigo)) {
+                System.out.println("\n---Codigo encontrado!---\nNome:" + pesquisa.getCodigo() + "Codigo:" + pesquisa.getCodigo() + "\n");
                 condicao = true;
             }
 
@@ -156,13 +153,13 @@ public class ListaM implements CSVParser {
             pesquisa = pesquisa.getProximo();
         }
         if (condicao == false) {
-            System.out.println("---Codigo não encontrado---");
+            System.out.println("\n---Codigo não encontrado---\n");
         }
 
     }
 
     @Override
-    public void imprimeListadoInicio() {
+    public void imprimeM() {
         // criando um variavel do tipo Nodo para percorrer, a mesma está recebendo o proximo da primeira posição
         Medicamento percorre = primeiro;
 
@@ -182,58 +179,29 @@ public class ListaM implements CSVParser {
 
     }
 
-    
-    
     // metodos  @Override
-    
-    
-    @Override
-    public void imprimeVetor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     @Override
     public void ordenarVetor() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisarRgV(String rg) {
+    public void enserirArquivoP(Paciente novop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisarNomeV(String nome) {
+    public void ImprimeP() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisarNomeMV(String nome) {
+    public void pesquisaNomeP(String nome) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisarCodigoM(String codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisaRG(String rg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void ensereVetorP(Paciente novop) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void arquivoNaListaP(Paciente novop) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void ensereVetorM(Medicamento novop) {
+    public void pesquisarRgP(String rg) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 import trabalho.interfac.CSVParser;
+
 /*
  * @author Ciro
  */
@@ -21,7 +22,7 @@ public class CSFile implements CSVParser {
     //metodos para carregar o arquivo       
     @Override
     public void open(String filename) throws FileNotFoundException {
-       // tenta realizar o procedimento abaixo
+        // tenta realizar o procedimento abaixo
         try {
 
             // cria uma variavel que irar usar os ; \n como delemitador   
@@ -38,7 +39,7 @@ public class CSFile implements CSVParser {
         }
 
     }
-    
+
     // metodo para retornar o arquivo
     @Override
     public Scanner getFile() {
@@ -57,46 +58,14 @@ public class CSFile implements CSVParser {
         System.exit(0);
     }
 
-        
     //metodos @Override
-    
-    
     @Override
     public Paciente readObjectPaciente() {
         return null;
     }
 
     @Override
-    public void arquivoNaListaP(Paciente novop) {
-
-    }
-
-    @Override
-    public void imprimeListadoInicio() {
-    }
-
-    @Override
-    public void ensereVetorP(Paciente novop) {
-
-    }
-
-    @Override
-    public void imprimeVetor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public void ordenarVetor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisaNome(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisaRG(String rg) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -106,37 +75,42 @@ public class CSFile implements CSVParser {
     }
 
     @Override
-    public void pesquisarRgV(String rg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisarNomeV(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisarNomeMV(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public void pesquisarCodigoM(String codigo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisaCodigo(String Codigo) {
+    public void enserirArquivoP(Paciente novop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void arquivoNaListaM(Medicamento novop) {
+    public void ImprimeP() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void ensereVetorM(Medicamento novop) {
+    public void pesquisaNomeP(String nome) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void pesquisarRgP(String rg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void imprimeM() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void enserirArquivoM(Medicamento novo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void pesquisarNomeM(String nome) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

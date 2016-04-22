@@ -83,7 +83,7 @@ public class App {
 
                                     try {
                                         while (v.readObjectPaciente() != null) {
-                                            v.ensereVetorP(v.readObjectPaciente());
+                                            v.enserirArquivoP(v.readObjectPaciente());
                                         }
                                         System.out.println("\n---Vetor Carregado!---\n");
                                     } catch (Exception e) {
@@ -97,7 +97,7 @@ public class App {
                                 case 4:
                                     try {
                                         System.out.println("Digite o nome:");
-                                        v.pesquisarNomeV(entrada.nextLine());
+                                        v.pesquisaNomeP(entrada.nextLine());
                                     } catch (Exception e) {
                                         System.out.println("\n---Erro ao pesquisar nome!---\n");
                                     }
@@ -105,13 +105,13 @@ public class App {
                                 case 5:
                                     try {
                                         System.out.println("Digite o rg:");
-                                        v.pesquisarRgV(entrada.nextLine());
+                                        v.pesquisarRgP(entrada.nextLine());
                                     } catch (Exception e) {
                                         System.out.println("\n---Erro ao pesquisar RG!---\n");
                                     }
                                     break;
                                 case 6:
-                                    v.imprimeVetor();
+                                    v.ImprimeP();
                                     break;
 
                             }
@@ -147,7 +147,7 @@ public class App {
 
                                     try {
                                         while (mv.readObjectMedicamento() != null) {
-                                            mv.ensereVetorM(mv.readObjectMedicamento());
+                                            mv.enserirArquivoM(mv.readObjectMedicamento());
                                         }
                                         System.out.println("\n---Vetor Carregado!---\n");
                                     } catch (Exception e) {
@@ -161,22 +161,26 @@ public class App {
                                 case 4:
                                     try {
                                         System.out.println("Digite o nome:");
-                                        mv.pesquisarNomeMV(entrada.nextLine());
+                                        
+                                        mv.pesquisarNomeM(entrada.nextLine());
+                                        
                                     } catch (Exception e) {
-                                        System.out.println("\n---Erro ao informar Nome!---\n");
+                                        System.out.println("\n---Erro ao informar dado!---\n");
                                     }
                                     break;
                                 case 5:
 
                                     try {
                                         System.out.println("Digite o Codigo:");
+                                        
                                         mv.pesquisarCodigoM(entrada.nextLine());
+                                        
                                     } catch (Exception e) {
-                                        System.out.println("\n---Erro ao informar Nome!---\n");
+                                        System.out.println("\n---Erro ao informar dado!---\n");
                                     }
                                     break;
                                 case 6:
-                                    mv.imprimeVetor();
+                                    mv.imprimeM();
                                     break;
 
                             }
@@ -232,7 +236,7 @@ public class App {
                                 case 2:
                                     try {
                                         while (l.readObjectPaciente() != null) {
-                                            l.arquivoNaListaP(l.readObjectPaciente());
+                                            l.enserirArquivoP(l.readObjectPaciente());
                                         }
                                         System.out.println("\n---Lista Carregada!---\n");
                                     } catch (Exception e) {
@@ -244,7 +248,7 @@ public class App {
                                     try {
 
                                         System.out.println("Digite nome para pesquisiar:");
-                                        l.pesquisaNome(entrada.nextLine());
+                                        l.pesquisaNomeP(entrada.nextLine());
                                     } catch (Exception e) {
                                         System.out.println("\n---erro ao informar dado---\n");
                                     }
@@ -254,7 +258,7 @@ public class App {
                                     try {
 
                                         System.out.println("Digite RG para pesquisiar:");
-                                        l.pesquisaRG(entrada.nextLine());
+                                        l.pesquisarRgP(entrada.nextLine());
                                     } catch (Exception e) {
                                         System.out.println("\n---erro ao informar dado---\n");
                                     }
@@ -262,7 +266,7 @@ public class App {
 
                                 case 5:
 
-                                    l.imprimeListadoInicio();
+                                    l.ImprimeP();
 
                                     break;
 
@@ -302,7 +306,7 @@ public class App {
 
                                     try {
                                         while (ml.readObjectMedicamento() != null) {
-                                            ml.arquivoNaListaM(ml.readObjectMedicamento());
+                                            ml.enserirArquivoM(ml.readObjectMedicamento());
                                         }
                                         System.out.println("\n---Lista Carregada!---\n");
                                     } catch (Exception e) {
@@ -316,7 +320,7 @@ public class App {
                                     try {
 
                                         System.out.println("Digite nome para pesquisiar:");
-                                        ml.pesquisaNome(entrada.nextLine());
+                                        ml.pesquisarNomeM(entrada.nextLine());
                                     } catch (Exception e) {
 
                                         System.out.println("\n---Erro ao informar dado---\n");
@@ -329,17 +333,18 @@ public class App {
                                     try {
 
                                         System.out.println("Digite Codigo para pesquisiar:");
-                                        ml.pesquisaCodigo(entrada.nextLine());
+                                        ml.pesquisarCodigoM(entrada.nextLine());
                                     } catch (Exception e) {
 
                                         System.out.println("\n---Erro ao informar dado---\n");
+                                        
                                     }
 
                                     break;
 
                                 case 5:
 
-                                    ml.imprimeListadoInicio();
+                                    ml.imprimeM();
 
                                     break;
 

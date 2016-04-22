@@ -57,7 +57,7 @@ public class VetorM implements CSVParser {
         this.p[pos] = p;
     }
 
-    MedicamentoParser v = new MedicamentoParser();
+    CSVParser v = new MedicamentoParser();
 
     @Override
     public Medicamento readObjectMedicamento() {
@@ -81,14 +81,14 @@ public class VetorM implements CSVParser {
     }
 
      @Override
-    public void ensereVetorM(Medicamento novop) {
+    public void enserirArquivoM(Medicamento novo) {
   
-                add(novop);
+                add(novo);
 
     }
 
     @Override
-    public void imprimeVetor() {
+    public void imprimeM() {
 
         if (getFile() != null) {
 
@@ -96,6 +96,7 @@ public class VetorM implements CSVParser {
                 for (int i = 0; i < size() - 2; i++) {
                     System.out.println("Codigo:" + get(i).getCodigo() + " Medicamento:" + get(i).getNome());
                 }
+                System.out.println("\n---Fim---\n");
             } else {
                 System.out.println("\n---Vetor está vazio!---\n");
             }
@@ -133,12 +134,12 @@ public class VetorM implements CSVParser {
     }
 
     @Override
-    public void pesquisarNomeMV(String nome) {
+    public void pesquisarNomeM(String nome) {
         boolean condicao = false;
 
         for (int i = 0; i < size() - 1; i++) {
 
-            if (get(i).getNome().equalsIgnoreCase(nome)) {
+            if (get(i).getNome().equals(nome)) {
                 System.out.println("\n---Nome encontrado!---\nNome:" + get(i).getNome() + " Codigo:" + get(i).getCodigo() + "\n");
                 condicao = true;
             }
@@ -157,7 +158,7 @@ public class VetorM implements CSVParser {
 
         for (int i = 0; i < size() - 1; i++) {
 
-            if (get(i).getCodigo().equalsIgnoreCase(codigo)) {
+            if (get(i).getCodigo().equals(codigo)) {
                 System.out.println("\n---Codigo encontrado!---\nNome:" + get(i).getNome() + " Codigo:" + get(i).getCodigo() + "\n");
                 condicao = true;
             }
@@ -207,49 +208,26 @@ public class VetorM implements CSVParser {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+ 
+
     @Override
-    public void arquivoNaListaP(Paciente novop) {
+    public void enserirArquivoP(Paciente novop) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void imprimeListadoInicio() {
+    public void ImprimeP() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisaNome(String nome) {
+    public void pesquisaNomeP(String nome) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void pesquisaRG(String rg) {
+    public void pesquisarRgP(String rg) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void pesquisarRgV(String rg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void pesquisarNomeV(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisaCodigo(String Codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void ensereVetorP(Paciente novop) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void arquivoNaListaM(Medicamento novop) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-}

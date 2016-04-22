@@ -57,7 +57,7 @@ public class ListaP implements CSVParser {
     }
 
     @Override
-    public void arquivoNaListaP(Paciente novop) {
+    public void enserirArquivoP(Paciente novop) {
 
         if (novop != null) {
 
@@ -116,14 +116,14 @@ public class ListaP implements CSVParser {
 
     // pesquisa na lista 
     @Override
-    public void pesquisaNome(String nome) {
+    public void pesquisaNomeP(String nome) {
         // criando duas variaves onde sentinela sempre ira ficar um elemento a traz do remove
         Paciente pesquisa = primeiro.getProximo();
         // percorrendo a lista até o final onde a mesma recebe null
         while (pesquisa != null) {
             // compara o nome do nodo com o nome que está sendo comparado
             if (pesquisa.getNome().equals(nome)) {
-                System.out.println("\n---Nome encontrado!---\nNome:" + pesquisa.getNome() + " RG:" + pesquisa.getRg() + "/n");
+                System.out.println("\n---Nome encontrado!---\nNome:" + pesquisa.getNome() + " RG:" + pesquisa.getRg() + "\n");
                 break;
             }
             if (pesquisa.getProximo() == null) {
@@ -138,7 +138,7 @@ public class ListaP implements CSVParser {
 
     // pesquisa na lista 
     @Override
-    public void pesquisaRG(String rg) {
+    public void pesquisarRgP(String rg) {
         // criando duas variaves onde sentinela sempre ira ficar um elemento a traz do remove
         Paciente pesquisa = primeiro.getProximo();
         boolean condicao = false;
@@ -147,7 +147,7 @@ public class ListaP implements CSVParser {
         while (pesquisa != null) {
             // compara o nome do nodo com o nome que está sendo comparado
             if (pesquisa.getRg().equals(rg)) {
-                System.out.println("\n---Rg encontrado!---\nNome:" + pesquisa.getNome() + "Rg:" + pesquisa.getRg());
+                System.out.println("\n---Rg encontrado!---\nNome:" + pesquisa.getNome() + "Rg:" + pesquisa.getRg()+"\n");
                 condicao = true;
             }
             // seguew pro proximo nodo
@@ -160,7 +160,7 @@ public class ListaP implements CSVParser {
     }
 
     @Override
-    public void imprimeListadoInicio() {
+    public void ImprimeP() {
         // criando um variavel do tipo Nodo para percorrer, a mesma está recebendo o proximo da primeira posição
         Paciente percorre = primeiro;
 
@@ -184,55 +184,28 @@ public class ListaP implements CSVParser {
     // metodos  @Override
     
     
-    
-    
-    @Override
-    public void ensereVetorP(Paciente novop) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void imprimeVetor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     @Override
     public void ordenarVetor() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void pesquisarRgV(String rg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisarNomeV(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pesquisarNomeMV(String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+  
     @Override
     public void pesquisarCodigoM(String codigo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
     @Override
-    public void pesquisaCodigo(String Codigo) {
+    public void imprimeM() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void arquivoNaListaM(Medicamento novop) {
+    public void enserirArquivoM(Medicamento novo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void ensereVetorM(Medicamento novop) {
+    public void pesquisarNomeM(String nome) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

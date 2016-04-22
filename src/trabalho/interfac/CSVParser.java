@@ -7,49 +7,41 @@ import java.util.Scanner;
 
 public interface CSVParser {
 
-    //interfaces
-    //csvfile
     public void open(String filename) throws FileNotFoundException;
 
+    // CSFFILE
     Scanner getFile();
 
     void setFile(Scanner file);
 
     void close();
 
-    //csvparse
-    //p
+    // Parser
     Paciente readObjectPaciente();
 
-    void ensereVetorP(Paciente novop);
-
-    void arquivoNaListaP(Paciente novop);
-
-    //M
     Medicamento readObjectMedicamento();
 
-    void arquivoNaListaM(Medicamento novop);
+    // junção do vp e lp
+    void enserirArquivoP(Paciente novop);
 
-    void ensereVetorM(Medicamento novop);
+    void ImprimeP();
 
-    void imprimeListadoInicio();
+    void pesquisaNomeP(String nome);
 
-    void pesquisaNome(String nome);
+    void pesquisarRgP(String rg);
 
-    void pesquisaRG(String rg);
+    // junção do vm e lm
+    
+    
+    void imprimeM();
 
-    void pesquisaCodigo(String Codigo);
+    void enserirArquivoM(Medicamento novo);
 
-    void imprimeVetor();
-
-    void ordenarVetor();
-
-    void pesquisarRgV(String rg);
-
-    void pesquisarNomeV(String nome);
-
-    void pesquisarNomeMV(String nome);
+    void pesquisarNomeM(String nome);
 
     void pesquisarCodigoM(String codigo);
-
+    
+  
+    void ordenarVetor();
+    //M
 }
